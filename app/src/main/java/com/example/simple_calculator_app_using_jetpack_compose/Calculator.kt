@@ -43,7 +43,7 @@ fun Calculator(
             verticalArrangement = Arrangement.spacedBy(buttonSpacing)
         ) {
             Text(
-                text = state.Number1 + (state.operation ?:"") + state.Number2,
+                text = state.Number1 + (state.operation?.symbol ?:"") + state.Number2,
                 textAlign = TextAlign.End,
                 modifier = Modifier
                     .fillMaxWidth()
