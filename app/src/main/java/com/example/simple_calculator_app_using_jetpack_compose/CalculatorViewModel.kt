@@ -7,13 +7,8 @@ import androidx.lifecycle.ViewModel
 import com.plcoding.composecalculator.CalculatorActions
 
 class CalculatorViewModel:ViewModel() {
-
-
     var state by mutableStateOf(CalculatorState())
         private set
-
-
-
     fun onAction(action: CalculatorActions){
         when(action){
             is CalculatorActions.Number -> enterNumber(action.number)
