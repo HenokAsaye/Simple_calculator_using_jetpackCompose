@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.simple_calculator_app_using_jetpack_compose.ui.theme.Simple_calculator_app_using_jetpack_composeTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,6 +21,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Simple_calculator_app_using_jetpack_composeTheme {
+                val viewModel = viewModel<CalculatorViewModel>()
+                val state = viewModel.state
+                val buttonSpacing = 8.dp
             }
         }
     }
